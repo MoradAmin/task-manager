@@ -3,48 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Murad's Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Weather Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 20px; background-color: #f0f0f0; }
+    .container { width: 600px; margin: 0 auto; text-align: center; }
+    #weather { margin-top: 20px; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+  </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <header>
-    <h1>Murad Dev</h1>
-    <p>Full Stack Developer in training</p>
-  </header>
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am studying software engineering and web development in Catalonia and learning modern technologies.</p>
-  </section>
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>C</li>
-      <li>Java</li>
-      <li>HTML/CSS/JavaScript</li>
-      <li>SQL</li>
-      <li>Bootstrap</li>
-      <li>Bash & PowerShell</li>
-    </ul>
-  </section>
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Check out my GitHub profile for more projects.</p>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: murad.dev@protonmail.com</p>
-  </section>
-  <footer>
-    <p>&copy; 2025 Murad Dev</p>
-  </footer>
+  <div class="container">
+    <h1>Weather Dashboard</h1>
+    <p>Enter latitude and longitude to get current weather.</p>
+    <input type="text" id="lat" placeholder="Latitude (e.g., 41.3851)">
+    <input type="text" id="lon" placeholder="Longitude (e.g., 2.1734)">
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="weather"></div>
+  </div>
+  <script>
+    async function getWeather() {
+      const lat = document.getElementById('lat').value;
+      const lon = document.getElementById('lon').value;
+      if(!lat || !lon) { alert('Please enter both latitude and longitude'); return; }
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current_weather=true`;
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const weatherDiv = document.getElementById('weather');
+        const weather = data.current_weather;
+        weatherDiv.innerHTML = `<h3>Current Weather</h3><p>Temperature: ${weather.temperature}°C</p><p>Wind Speed: ${weather.windspeed} m/s</p><p>Weather Code: ${weather.weathercode}</p>`;
+      } catch (err) {
+        alert('Failed to fetch weather data');
+      }
+    }
+  </script>
 </body>
 </html>

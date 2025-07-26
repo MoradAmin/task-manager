@@ -1,17 +1,17 @@
-# Personal Portfolio Site
+# Weather Dashboard
 
-A simple portfolio website to showcase Murad's skills and projects.
+A simple front-end application that fetches current weather data based on latitude and longitude using the [Open-Meteo API](https://open-meteo.com/en).
 
 ## Features
 
-- Responsive navigation
-- Sections for About, Skills, Projects, and Contact
-- Clean and modern design
+- Input coordinates to get current weather
+- Displays temperature, wind speed, and weather code
+- No API key required
 
 ## Usage
 
-Open `index.html` in your browser to view the portfolio site.
+Open the `index.html` file in your browser and enter the latitude and longitude of the location you want to check.
 
 ## Preview
 
-![Portfolio Preview](preview.png)
+![Weather Dashboard Preview](preview.png)
