@@ -1,23 +1,24 @@
-# Task Manager
+# Automation Scripts
 
-A simple task management web application built with Flask and SQLite.
+A collection of useful Bash and Python scripts to automate common tasks.
 
-## Features
+## Scripts
 
-- Add new tasks
-- Mark tasks as complete or undo
-- Delete tasks
-- Persist tasks using SQLite
+- **backup.sh**: Backs up a directory into a zip file with a timestamped name.
+- **update_packages.sh**: Updates and upgrades packages on Debian/Ubuntu systems.
+- **search_logs.sh**: Searches for a pattern recursively in the /var/log directory.
+- **auto_organize.py**: Python script to organize files in the current directory into folders by extension.
 
-## Setup
+## Usage
 
+Run each script from the command line. For example:
 ```bash
-pip install flask flask_sqlalchemy
-python app.py
+bash backup.sh /path/to/dir
+bash update_packages.sh
+bash search_logs.sh error
+python3 auto_organize.py
 ```
-
-Navigate to `http://localhost:5000` in your browser.
 
 ## Preview
 
-![Task Manager Preview](preview.png)
+![Automation Scripts Preview](preview.png)
