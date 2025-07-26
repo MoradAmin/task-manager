@@ -1,24 +1,25 @@
-# Automation Scripts
+# Data Analysis with Python
 
-A collection of useful Bash and Python scripts to automate common tasks.
+This project demonstrates simple data analysis using the Iris dataset with Pandas and Matplotlib.
 
-## Scripts
+## Features
 
-- **backup.sh**: Backs up a directory into a zip file with a timestamped name.
-- **update_packages.sh**: Updates and upgrades packages on Debian/Ubuntu systems.
-- **search_logs.sh**: Searches for a pattern recursively in the /var/log directory.
-- **auto_organize.py**: Python script to organize files in the current directory into folders by extension.
+- Load and preview data from a CSV file
+- Generate summary statistics
+- Plot a histogram for sepal length
 
-## Usage
+## Setup
 
-Run each script from the command line. For example:
+Install dependencies:
 ```bash
-bash backup.sh /path/to/dir
-bash update_packages.sh
-bash search_logs.sh error
-python3 auto_organize.py
+pip install pandas matplotlib
+```
+
+Run the analysis script:
+```bash
+python3 analyze.py
 ```
 
 ## Preview
 
-![Automation Scripts Preview](preview.png)
+![Data Analysis Preview](preview.png)
