@@ -1,25 +1,17 @@
-# Data Analysis with Python
+# Personal Portfolio Site
 
-This project demonstrates simple data analysis using the Iris dataset with Pandas and Matplotlib.
+A simple portfolio website to showcase Murad's skills and projects.
 
 ## Features
 
-- Load and preview data from a CSV file
-- Generate summary statistics
-- Plot a histogram for sepal length
+- Responsive navigation
+- Sections for About, Skills, Projects, and Contact
+- Clean and modern design
 
-## Setup
+## Usage
 
-Install dependencies:
-```bash
-pip install pandas matplotlib
-```
-
-Run the analysis script:
-```bash
-python3 analyze.py
-```
+Open `index.html` in your browser to view the portfolio site.
 
 ## Preview
 
-![Data Analysis Preview](preview.png)
+![Portfolio Preview](preview.png)
