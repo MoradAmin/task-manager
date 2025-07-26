@@ -1,17 +1,23 @@
-# Weather Dashboard
+# Task Manager
 
-A simple front-end application that fetches current weather data based on latitude and longitude using the [Open-Meteo API](https://open-meteo.com/en).
+A simple task management web application built with Flask and SQLite.
 
 ## Features
 
-- Input coordinates to get current weather
-- Displays temperature, wind speed, and weather code
-- No API key required
+- Add new tasks
+- Mark tasks as complete or undo
+- Delete tasks
+- Persist tasks using SQLite
 
-## Usage
+## Setup
 
-Open the `index.html` file in your browser and enter the latitude and longitude of the location you want to check.
+```bash
+pip install flask flask_sqlalchemy
+python app.py
+```
+
+Navigate to `http://localhost:5000` in your browser.
 
 ## Preview
 
-![Weather Dashboard Preview](preview.png)
+![Task Manager Preview](preview.png)
